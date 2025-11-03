@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jual Beli Musang</title>
+    <link href="bootstrap538/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fff;
+            --text-color: #000;
+            --hero-bg: linear-gradient(135deg, #ff69b4, #17a2b8);
+            --card-bg: #fff;
+            --contact-bg: #f8f9fa;
+            --footer-bg: #343a40;
+            --footer-text: #fff;
+            --gallery-bg: #fff;
+        }
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #fff;
+            --hero-bg: linear-gradient(135deg, #8b0000, #0d4a5a);
+            --card-bg: #1e1e1e;
+            --contact-bg: #2a2a2a;
+            --footer-bg: #1a1a1a;
+            --footer-text: #ccc;
+            --gallery-bg: #1e1e1e;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .hero-section {
+            background: var(--hero-bg);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            transition: background-color 0.5s, color 0.5s;
+
+        }
+        .card {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            transition: background-color 0.5s, color 0.5s;
+
+        }
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .contact-section {
+            background-color: var(--contact-bg);
+            padding: 50px 0;
+            transition: background-color 0.5s, color 0.5s;
+
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            color: var(--text-color);
+            transition: background-color 0.5s, color 0.5s;
+
+        }
+        .btn-custom {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #138496;
+        }
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+        .gallery-section {
+            padding: 50px 0;
+            background-color: var(--gallery-bg);
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .carousel-indicators button {
+            background-color: #17a2b8;
+        }
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .dark-mode-toggle:hover {
+            color: #17a2b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Jual Beli Musang</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq1.html" target="_blank">FAQ</a>
+                    </li>
+                   
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentangkami.html">Tentang Kami</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lain-Lain
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled" href="#">Coming Soon</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Coming Soon</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="hubungikami.html">Hubungi Kami</a></li>
+                        </ul>
+                </ul>
+                <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h2 class="display-4">Hubungi Kami!</h2>
+            <p class="lead">Temukan musang impian Anda di sini! Dari musang normal hingga yang unik dan abnormal, kami punya semuanya.</p>
+            <hr class="my-4">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #17a2b8;">Hubungi Kami</h2>
+            <form id="contactForm" class="contact-form" onsubmit="return validateForm()">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama Lengkap:</label>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                    <span id="namaError" class="error"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda">
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="pesan" class="form-label">Pesan:</label>
+                    <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">Kirim Pesan</button>
+                <p id="successMsg" class="success mt-3"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Jual Beli Musang. Semua hak dilindungi.</p>
+            <p>Hubungi kami: info@musangmania.com</p>
+        </div>
+    </footer>
+
+    <script src="./bootstrap538/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Check dark mode preference from localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️';
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.textContent = '☀️';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.textContent = '🌙';
+            }
+        });
+
+        // Form Validation
+        function validateForm() {
+            let nama = document.getElementById("nama").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let namaError = document.getElementById("namaError");
+            let emailError = document.getElementById("emailError");
+            let successMsg = document.getElementById("successMsg");
+
+            // Reset messages
+            namaError.textContent = "";
+            emailError.textContent = "";
+            successMsg.textContent = "";
+
+            let valid = true;
+
+            // Validate Name
+            if (nama === "") {
+                namaError.textContent = "Nama wajib diisi!";
+                valid = false;
+            }
+
+            // Validate Email
+            if (email === "") {
+                emailError.textContent = "Email wajib diisi!";
+                valid = false;
+            } else if (!email.includes("@") || !email.includes(".")) {
+                emailError.textContent = "Format email tidak valid!";
+                valid = false;
+            }
+
+            // If valid, show success
+            if (valid) {
+                successMsg.textContent = "Terima kasih! Pesan Anda berhasil dikirim.";
+                document.getElementById("contactForm").reset();
+            }
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+
+</html>

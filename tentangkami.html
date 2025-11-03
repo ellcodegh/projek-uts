@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jual Beli Musang - Tentang Kami</title>
+    <link href="bootstrap538/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fff;
+            --text-color: #000;
+            --hero-bg: linear-gradient(135deg, #ff69b4, #17a2b8);
+            --card-bg: #fff;
+            --contact-bg: #f8f9fa;
+            --footer-bg: #343a40;
+            --footer-text: #fff;
+            --gallery-bg: #fff;
+        }
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #fff;
+            --hero-bg: linear-gradient(135deg, #8b0000, #0d4a5a);
+            --card-bg: #1e1e1e;
+            --contact-bg: #2a2a2a;
+            --footer-bg: #1a1a1a;
+            --footer-text: #ccc;
+            --gallery-bg: #1e1e1e;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .hero-section {
+            background: var(--hero-bg);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .card {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .about-section {
+            padding: 50px 0;
+            background-color: var(--bg-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .btn-custom {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #138496;
+        }
+        .dark-mode-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .dark-mode-toggle:hover {
+            color: #17a2b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Jual Beli Musang</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq1.html" target="_blank">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tentangkami.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lain-Lain
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled" href="#">Coming Soon</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Coming Soon</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="hubungikami.html">Hubungi Kami</a></li>
+                        </ul>
+                </ul>
+                <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h2 class="display-4">Tentang Kami</h2>
+            <p class="lead">Pelajari lebih lanjut tentang Jual Beli Musang dan komitmen kami untuk menyediakan musang terbaik.</p>
+            <hr class="my-4">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4" style="color: #17a2b8;">Siapa Kami?</h2>
+                            <p>Jual Beli Musang adalah platform terpercaya untuk membeli dan menjual berbagai jenis musang. Kami didirikan dengan visi untuk menghubungkan pecinta musang dari seluruh dunia, menyediakan musang normal hingga yang unik dan abnormal dengan kualitas terbaik.</p>
+                    <p>Kami berkomitmen untuk memberikan pengalaman belanja yang aman, transparan, dan memuaskan. Tim kami terdiri dari ahli hewan yang berpengalaman, memastikan setiap musang yang kami tawarkan sehat dan terawat dengan baik.</p>
+                    <h3 class="mt-4">Misi Kami</h3>
+                    <ul>
+                        <li>Menyediakan musang berkualitas tinggi dari sumber terpercaya.</li>
+                        <li>Mendorong adopsi dan perawatan musang yang bertanggung jawab.</li>
+                        <li>Membangun komunitas pecinta musang yang aktif dan informatif.</li>
+                    </ul>
+                    <h3 class="mt-4">Visi Kami</h3>
+                    <p>Menjadi platform utama untuk perdagangan musang secara global, dengan fokus pada etika, keamanan, dan kepuasan pelanggan.</p>
+                    <div class="text-center mt-4">
+                        <a href="hubungikami.html" class="btn btn-custom">Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Jual Beli Musang. Semua hak dilindungi.</p>
+            <p>Hubungi kami: info@musangmania.com</p>
+        </div>
+    </footer>
+
+    <script src="./bootstrap538/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Check dark mode preference from localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️';
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.textContent = '☀️';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.textContent = '🌙';
+            }
+        });
+    </script>
+</body>
+
+</html>
